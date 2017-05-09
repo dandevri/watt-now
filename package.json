@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm i && node server.js",
-    "start:dev": "npm i && nodemon server.js"
+    "start:dev": "npm i && nodemon server.js",
+    "lint": "xo *.js"
   },
   "repository": {
     "type": "git",
