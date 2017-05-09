@@ -21,5 +21,19 @@
   "bugs": {
     "url": "https://github.com/dandevri/watt-now/issues"
   },
-  "homepage": "https://github.com/dandevri/watt-now#readme"
+  "homepage": "https://github.com/dandevri/watt-now#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "xo": "^0.18.1"
+  },
+  "xo": {
+    "semicolon": true,
+    "space": true,
+    "esnext": false,
+    "env": [
+      "node",
+      "browser"
+    ],
+    "rules": {}
+  }
 }
