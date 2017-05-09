@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <%- include ../partials/meta.ejs -%>
+    <%- include ../partials/meta -%>
     <link rel="stylesheet" type="text/css" href="pages/form.css">
     <title>Login</title>
   </head>
@@ -11,10 +11,8 @@
     <form action="">
       <label for="companyName">Food Truck</label>
       <input type="text" id="companyName" placeholder="Naam food truck">
-      <label for="eventName">Festival</label>
-      <input type="text" id="eventName" placeholder="Naam festival">
       <button type="submit" name="login" value"login">Log in</button>
-      <button type="submit" name="register" value"register">Register</button>
+      <a href="/register">Register</a>
     </form>
   </body>
 
