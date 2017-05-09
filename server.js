@@ -10,7 +10,7 @@ app.use(express.static('src'))
   .set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-  res.render('index', { page: 'home' });
+  res.render('index', {page: 'home'});
 });
 
 app.get('/login', function (req, res) {
