@@ -4,7 +4,9 @@
   "description": "Project for watt-now 🔌️⚡️",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm i && node server.js",
+    "start:dev": "npm i && nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   },
   "homepage": "https://github.com/dandevri/watt-now#readme",
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.15.2"
   },
   "devDependencies": {

@@ -9,6 +9,10 @@ app.use(express.static('src'))
   .set('views', 'views')
   .set('view engine', 'ejs');
 
+app.get('/', function (req, res) {
+  res.render('index');
+});
+
 app.listen(port, host, function () {
   console.log('Server running', host, ':', port);
 });
