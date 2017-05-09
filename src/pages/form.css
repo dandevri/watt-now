@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Form Layout
+   ========================================================================== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Dosis', sans-serif;
+}
+
+form {
+  background-color: #5C637A;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border-radius: .5em;
+}
+
+label {
+  line-height: 4;
+  color: #fff;
+}
