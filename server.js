@@ -13,6 +13,10 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
+app.get('/login', function (req, res) {
+  res.render('pages/login.ejs');
+});
+
 app.listen(port, host, function () {
   console.log('Server running', host, ':', port);
 });
