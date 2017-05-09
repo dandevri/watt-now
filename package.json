@@ -22,6 +22,9 @@
     "url": "https://github.com/dandevri/watt-now/issues"
   },
   "homepage": "https://github.com/dandevri/watt-now#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
   "devDependencies": {
     "nodemon": "^1.11.0",
     "xo": "^0.18.1"
