@@ -4,7 +4,10 @@
   "description": "Project for watt-now 🔌️⚡️",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm i && node server.js",
+    "start:dev": "npm i && nodemon server.js",
+    "lint": "xo *.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,23 @@
   "bugs": {
     "url": "https://github.com/dandevri/watt-now/issues"
   },
-  "homepage": "https://github.com/dandevri/watt-now#readme"
+  "homepage": "https://github.com/dandevri/watt-now#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "xo": "^0.18.1"
+  },
+  "xo": {
+    "semicolon": true,
+    "space": true,
+    "esnext": false,
+    "env": [
+      "node",
+      "browser"
+    ],
+    "rules": {}
+  }
 }
