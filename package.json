@@ -1,0 +1,25 @@
+{
+  "name": "watt-now",
+  "version": "1.0.0",
+  "description": "Project for watt-now 🔌️⚡️",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandevri/watt-now.git"
+  },
+  "keywords": [
+    "project",
+    "watt-now",
+    "hva",
+    "cmda"
+  ],
+  "author": "Danny de Vries",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dandevri/watt-now/issues"
+  },
+  "homepage": "https://github.com/dandevri/watt-now#readme"
+}
