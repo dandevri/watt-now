@@ -1,3 +1,7 @@
+body {
+  padding: 0 25px;
+}
+
 ul {
   margin: 0 auto;
   padding: 0;
@@ -11,17 +15,24 @@ ul li {
   flex-direction: column;
   position: relative;
   padding: 10px;
-  padding-left: 56px;
+  padding-left: 60px;
   background: #5C637A;
   color: #F8F9FB;
 }
 
+ul span:not(:first-of-type) {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 ul span:first-of-type {
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 46px;
-  height: 46px;
+  top: 7.5px;
+  left: 7.5px;
+  width: 45px;
+  height: 45px;
   background-size: cover;
   background-position: center;
   border-radius: 50%;
