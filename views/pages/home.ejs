@@ -9,13 +9,15 @@
 
   <body>
     <%- include ../partials/header -%>
-    <h1>Welcome <%= user %></h1>
-    <h2>Your festivals</h2>
-    <ul>
-      <% festivals.map(function (festival) { %>
-        <li><span style="background-image: url(<%= festival.image %>)"></span><span><%= festival.name %></span><span><%= festival.date %></span></li>
-      <% }) %>
-    </ul>
+    <main>
+      <h1>Welcome <%= user %></h1>
+      <h2>Your festivals</h2>
+      <ul>
+        <% festivals.map(function (festival) { %>
+          <li><span style="background-image: url(<%= festival.image %>)"></span><span><%= festival.name %></span><span><%= festival.date %></span></li>
+        <% }) %>
+      </ul>
+    </main>
     <%- include ../partials/footer -%>
   </body>
 </html>
