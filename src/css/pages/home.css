@@ -1,0 +1,32 @@
+ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 85%;
+  max-width: 850px
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+  padding-left: 56px;
+  background: #5C637A;
+  color: #F8F9FB;
+}
+
+ul span:first-of-type {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 46px;
+  height: 46px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+ul span:nth-of-type(2) {
+  text-transform: capitalize;
+}
