@@ -9,15 +9,15 @@ app.use(express.static('src'))
   .set('views', 'views')
   .set('view engine', 'ejs');
 
-app.get('/', function (req, res) {
-  res.render('index');
+app.get('/dashboard/:user/:festival', function (req, res) {
+  res.render('pages/dashboard');
 });
 
 app.get('/login', function (req, res) {
   res.render('pages/login');
 });
 
-app.get('/festival', function (req, res) {
+app.get('/', function (req, res) {
   res.render('pages/home', {user: 'foodChef', festivals: [{name: 'rollende keukens', date: '10 mei', image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'}]});
 });
 
