@@ -21,6 +21,17 @@ app.get('/', function (req, res) {
   res.render('pages/home', {user: 'foodChef', festivals: [{name: 'rollende keukens', date: '10 mei', image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'}]});
 });
 
+app.get('/api/energy/', energyLevel);
+
+function energyLevel (req, res) {
+  console.log('Received energy ', req.query.level, ' request');
+  if (req.query.level === '10') {
+    console.log('10 procent');
+  } else if (req.query.level === '20') {
+    console.log('20 procent');
+  }
+}
+
 app.get('/register', function (req, res) {
   res.render('pages/register');
 });
