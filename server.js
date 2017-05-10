@@ -22,7 +22,7 @@ app.get('/festival', function (req, res) {
 });
 
 app.get('/register', function (req, res) {
-  res.render('pages/register.ejs');
+  res.render('pages/register');
 });
 
 app.listen(port, host, function () {
