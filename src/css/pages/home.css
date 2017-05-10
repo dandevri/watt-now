@@ -1,8 +1,8 @@
-body {
+main {
   padding: 0 2em;
 }
 
-ul {
+main ul {
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -10,7 +10,7 @@ ul {
   max-width: 50em
 }
 
-ul li {
+main ul li {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -20,14 +20,14 @@ ul li {
   color: #F8F9FB;
 }
 
-ul span:not(:first-of-type) {
+main ul span:not(:first-of-type) {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-ul span:first-of-type {
+main ul span:first-of-type {
   position: absolute;
   top: .75em;
   left: .5em;
@@ -38,6 +38,6 @@ ul span:first-of-type {
   border-radius: 50%;
 }
 
-ul span:nth-of-type(2) {
+main ul span:nth-of-type(2) {
   text-transform: capitalize;
 }
