@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var session = require('express-session');
 var mongoose = require('mongoose');
 
@@ -9,9 +10,14 @@ mongoose.connect('mongodb://localhost/watt');
 
 var app = express();
 
-app.use(session({secret: 'ianlol'}));
+app.use(session({
+  secret: 'lol',
+  resave: false,
+  saveUninitialized: true
+}));
 
-var sess;
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static('src'))
   .set('views', 'views')
@@ -26,13 +32,20 @@ app.get('/login', function (req, res) {
 });
 
 app.post('/login', function (req, res) {
-  sess = req.session;
+  if (!req.body.username) {
+    return res.redirect('/login');
+  }
 
   mongoose.model('user')
-  .findOne({username: req.body.username});
-  sess.username = req.body.username;
+    .findOne({username: req.body.username})
+    .select('username');
 
-  res.redirect('/festival/:id');
+    if (findOne) {
+      req.session.username = username;
+      return res.redirect('/festival');
+    } else {
+      return res.redirect('/login');
+    }
 });
 
 app.listen(port, host, function () {
