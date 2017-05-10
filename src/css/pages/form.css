@@ -16,6 +16,7 @@ form {
   padding: 2em;
   border-radius: .5em;
   min-width: 20em;
+  margin-top: 5em;
 }
 
 label {
@@ -34,4 +35,8 @@ a {
 
 a:hover {
   opacity: 1;
+}
+
+img {
+  width: 20em;
 }
