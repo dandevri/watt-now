@@ -32,13 +32,11 @@ app.get('/login', function (req, res) {
 });
 
 app.post('/login', function (req, res) {
-  if (!req.body.username) {
-    return res.redirect('/login');
-  }
-
   mongoose.model('user')
     .findOne({username: req.body.username})
     .select('username');
+
+    console.log(findOne);
 
     if (findOne) {
       req.session.username = username;
