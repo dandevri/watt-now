@@ -1,5 +1,45 @@
+/* ==========================================================================
+   Reset styles
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+
+input {
+  font-size: 0.8em;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #E9EAEC;
+}
+
+/* ==========================================================================
+   Color
+   ========================================================================== */
 body {
-  background-color: papayawhip;
+  background-color: #F8F9FB;
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+button {
+  padding: 1em 2.2em;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #060c36;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #00ABEB;
   margin: 0;
 }
 
