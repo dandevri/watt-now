@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <%- include ../partials/meta -%>
+    <link rel="stylesheet" type="text/css" href="css/pages/home.css">
+    <title>Festivals</title>
+  </head>
+
+  <body>
+    <h1>Welcome <%= user %></h1>
+    <h2>Your festivals</h2>
+    <ul>
+      <% festivals.map(function (festival) { %>
+        <li><span style="background-image: url(<%= festival.image %>)"></span><span><%= festival.name %></span><span><%= festival.date %></span></li>
+      <% }) %>
+    </ul>
+  </body>
+  <%- include ../partials/footer -%>
+</html>
