@@ -1,7 +1,10 @@
 var express = require('express');
+var mongoose = require('mongoose');
 
 var port = process.env.PORT || '3000';
 var host = process.env.HOST || '0.0.0.0';
+
+mongoose.connect('mongodb://localhost/watt');
 
 var app = express();
 
@@ -15,6 +18,11 @@ app.get('/', function (req, res) {
 
 app.get('/login', function (req, res) {
   res.render('pages/login.ejs');
+});
+
+app.post('/login', function (req, res) {
+  mongoose.model('user')
+    .findOne({username: req.body.username});
 });
 
 app.listen(port, host, function () {
