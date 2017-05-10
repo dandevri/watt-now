@@ -10,7 +10,7 @@ app.use(express.static('src'))
   .set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-  res.render('index', {page: 'home'});
+  res.render('index');
 });
 
 app.get('/login', function (req, res) {
@@ -22,7 +22,7 @@ app.get('/festival', function (req, res) {
 });
 
 app.get('/register', function (req, res) {
-  res.render('pages/register.ejs');
+  res.render('pages/register');
 });
 
 app.listen(port, host, function () {
