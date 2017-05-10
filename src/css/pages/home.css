@@ -1,5 +1,5 @@
 body {
-  padding: 0 25px;
+  padding: 0 2em;
 }
 
 ul {
@@ -7,15 +7,15 @@ ul {
   padding: 0;
   list-style: none;
   width: 85%;
-  max-width: 850px
+  max-width: 50em
 }
 
 ul li {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 10px;
-  padding-left: 60px;
+  padding: 1em;
+  padding-left: 4em;
   background: #5C637A;
   color: #F8F9FB;
 }
@@ -29,10 +29,10 @@ ul span:not(:first-of-type) {
 
 ul span:first-of-type {
   position: absolute;
-  top: 7.5px;
-  left: 7.5px;
-  width: 45px;
-  height: 45px;
+  top: .75em;
+  left: .5em;
+  width: 3em;
+  height: 3em;
   background-size: cover;
   background-position: center;
   border-radius: 50%;
