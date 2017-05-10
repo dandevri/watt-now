@@ -3,12 +3,27 @@
 
   <head>
     <%- include ../partials/meta -%>
-    <link rel="stylesheet" type="text/css" href="css/pages/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="/css/pages/dashboard.css">
     <title>Dashboard</title>
   </head>
 
   <body>
     <%- include ../partials/header -%>
+    <main>
+      <h1><%= festival %></h1>
+      <section>
+        <h1>Consumed</h1>
+        <article class="progress-bar">
+          <span style="width: <%= totalUsage %>"></span>
+        </article>
+      </section>
+      <section>
+        <h1>Appliances</h1>
+        <article class="appliances">
+
+        </article>
+      </section>
+    </main>
     <%- include ../partials/footer -%>
   </body>
 </html>
