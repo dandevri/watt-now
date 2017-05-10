@@ -1,0 +1,43 @@
+main {
+  padding: 0 2em;
+}
+
+main ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 85%;
+  max-width: 50em
+}
+
+main ul li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1em;
+  padding-left: 4em;
+  background: #5C637A;
+  color: #F8F9FB;
+}
+
+main ul span:not(:first-of-type) {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main ul span:first-of-type {
+  position: absolute;
+  top: .75em;
+  left: .5em;
+  width: 3em;
+  height: 3em;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+main ul span:nth-of-type(2) {
+  text-transform: capitalize;
+}
