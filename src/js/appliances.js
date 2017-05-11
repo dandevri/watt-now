@@ -1,9 +1,9 @@
-var getFieldset = document.getElementById('add').addEventListener('click', addFieldset);
-var getButton = document.getElementById('remove').addEventListener('click', removeFieldset);
+document.getElementById('add').addEventListener('click', addFieldset);
+document.getElementById('remove').addEventListener('click', removeFieldset);
 
 function addFieldset() {
-  document.getElementsByTagName('main')[0].innerHTML +=
-  `<fieldset class="aplliances">
+  document.getElementsByClassName('appliances')[document.getElementsByClassName('appliances').length - 1].insertAdjacentHTML('afterend',
+  `<fieldset class="appliances">
     <div class="field">
       <label for="appliance">Appliance name</label>
       <input type="text">
@@ -16,9 +16,9 @@ function addFieldset() {
       <label for="quantity">Quantity</label>
       <input type="number" min="0">
     </div>
-  </fieldset>`;
+  </fieldset>`);
 }
 
 function removeFieldset() {
-  document.getElementsByTagName('fieldset')[0].remove();
+  document.getElementsByClassName('appliances')[document.getElementsByClassName('appliances').length - 1].remove();
 }
