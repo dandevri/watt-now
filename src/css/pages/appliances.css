@@ -28,6 +28,16 @@ main {
   margin: 1em;
 }
 
+main a {
+  color: #5C637A;
+  opacity: .65;
+  transition: .3s ease-in-out;
+}
+
+main a:hover {
+  opacity: 1;
+}
+
 .buttons {
   display: flex;
   justify-content: flex-end;
