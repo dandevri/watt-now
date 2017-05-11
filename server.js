@@ -29,6 +29,10 @@ app.get('/add/appliances', function (req, res) {
   res.render('pages/appliances');
 });
 
+app.get('/subscription', function (req, res) {
+  res.render('pages/subscription');
+});
+
 app.listen(port, host, function () {
   console.log('Server running', host, ':', port);
 });
