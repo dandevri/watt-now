@@ -17,11 +17,23 @@
         </article>
       </section>
       <section class="current-subscription">
-        <h1>Current Subscription</h1>
+        <h1>Subscription</h1>
         <article>
+          <h2>Current</h2>
           <span><%= subscription.size %></span>
           <span><%= subscription.cost %></span>
         </article>
+        <h2>Choose a new plan</h2>
+        <form class="plans" method="post">
+          <label <% if(label === 'label a') { %>class="checked"<% } %>><span>Plan A</span><span>2300KwH</span><span>€439,-</span><input type="radio" name="plan" value="plan-a" <% if(label === 'label a') { %>checked<% } %>></label>
+          <label <% if(label === 'label b') { %>class="checked"<% } %>><span>Plan B</span><span>2850KwH</span><span>€669,-</span><input type="radio" name="plan" value="plan-b" <% if(label === 'label b') { %>checked<% } %>></label>
+          <label <% if(label === 'label c') { %>class="checked"<% } %>><span>Plan C</span><span>3460KwH</span><span>€931,-</span><input type="radio" name="plan" value="plan-c" <% if(label === 'label c') { %>checked<% } %>></label>
+          <label <% if(label === 'label d') { %>class="checked"<% } %>><span>Plan D</span><span>4090KwH</span><span>€1048,-</span><input type="radio" name="plan" value="plan-d" <% if(label === 'label d') { %>checked<% } %>></label>
+          <label <% if(label === 'label e') { %>class="checked"<% } %>><span>Plan E</span><span>5000KwH</span><span>€1203,-</span><input type="radio" name="plan" value="plan-e" <% if(label === 'label e') { %>checked<% } %>></label>
+          <label <% if(label === 'label f') { %>class="checked"<% } %>><span>Plan F</span><span>5950KwH</span><span>€1478,-</span><input type="radio" name="plan" value="plan-f" <% if(label === 'label f') { %>checked<% } %>></label>
+          <label <% if(label === 'label g') { %>class="checked"<% } %>><span>Plan G</span><span>6480KwH</span><span>€1789,-</span><input type="radio" name="plan" value="plan-g" <% if(label === 'label g') { %>checked<% } %>></label>
+          <button type="submit" name="Send">Choose Plan</button>
+        </form>
       </section>
     </main>
     <%- include ../partials/footer -%>

@@ -1,3 +1,56 @@
 main {
   padding: 0 2em;
 }
+
+.label span {
+  text-transform: capitalize;
+  background: rgb(3, 147, 80);
+  color: #F8F9FB;
+  padding: 1em;
+  position: relative;
+}
+
+.label.b span {
+  background: rgb(61, 173, 78);
+}
+
+.label.c span {
+  background: rgb(178, 205, 51);
+}
+
+.label.d span {
+  background: rgb(249, 237, 0);
+  color: #060c36;
+}
+
+.label.e span {
+  background: rgb(252, 174, 25);
+}
+
+.label.f span {
+  background: rgb(240, 108, 51);
+}
+
+.label.g span {
+  background: rgb(227, 55, 51);
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+}
+
+.plans label {
+  width: calc(100% - 2em);
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  box-sizing: border-box;
+  margin: .5rem 1rem;
+  border: 1px solid #5C637A;
+  border-radius: .2em;
+}
+
+.plans label.checked {
+  background: #B2C9D6;
+}
