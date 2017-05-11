@@ -10,17 +10,17 @@
 [Turn down for Watt](https://youtu.be/dE-nfzcUiPk?t=14s) *(TDFW)* is an Real-Time application used by Food Trucks on large open festivals.
 
 ### Use Case
-#### Before the festival
+#### 🖥 Before the festival
 A food truck registers all the appliances it brings to the festival. Based on the number of appliances and the energy each appliance consumes the Food Truck gets a **label** for that particular festival. Each label has a **subscription**. This subscription has a maximum usage of energy consumed during the days of the festival. (For example *2100Kwh*).
 
 *The Food Truck is forced to think about the energy they consume and can consider bringing less appliances to the festival to keep the cost down.*
 
-#### During the festival
+#### 🏕 During the festival
 During the festival, energy is being measured from the Food Truck. The owner of the Food Truck can see the results in a handy dandy dashboard.
 
 *With this information the owner can determine if appliances need to be removed or turned off more frequently for the next day or next festival.*
 
-#### Inside the Food Truck
+#### 🚚 Inside the Food Truck
 Inside the Food Truck the owner can see the current status and energy level. *The owner can determine if the subscription is the right fit and even buy extra subscriptions.*
 
 The employees can also see the current energy usage and see if the energy levels are high or low.
@@ -80,3 +80,11 @@ To see all upcoming todo's and features please navigate to the [GitHub Projects]
 ## :page_facing_up: Contributing
 Please read [Contributing](CONTRIBUTING.md) for details on how to contribute to this project.
 To see a list of everybody who participated go to the [Contributors](https://github.com/dandevri/watt-now/graphs/contributors) page.
+
+## 👨🏼‍💻 Team
+![Ian Stewart](https://avatars2.githubusercontent.com/u/14125280?v=3&s=400) | ![Mirza van Meerwijk](https://avatars2.githubusercontent.com/u/12242967?v=3&s=400) | ![Danny de Vries](https://avatars2.githubusercontent.com/u/22084444?v=3&s=400)
+---|---|---
+[Ian Stewart](https://github.com/IanCStewart) | [Mirza van Meerwijk](https://github.com/Mimaaa) | [Danny de Vries](https://github.com/dandevri)
+
+## 📃 License
+This project is licensed under the [MIT](LICENSE.MD) License
