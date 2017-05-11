@@ -18,18 +18,16 @@
       <section>
         <h1>Consumed</h1>
         <article class="progress-bar">
-          <span style="width: <%= totalUsage %>"></span>
+          <span style="width: 0%"></span>
         </article>
       </section>
       <section>
         <h1>Appliances</h1>
         <article class="appliances">
-          <% appliances.map(function (appliance) { %>
-            <div>
-              <h1><%= appliance.name %></h1>
-              <canvas class="charts" id="<%= appliance.name %>-chart"></div>
-            </div>
-          <% }) %>
+          <div>
+            <h1>Espressomachine</h1>
+            <canvas class="charts"></div>
+          </div>
         </article>
       </section>
     </main>
@@ -38,30 +36,73 @@
     <script>
       var appliances = document.getElementsByClassName('charts');
 
-      for (let i = 0; i < appliances.length; i++) {
-        new Chart(appliances[i], {
-          type: 'doughnut',
-          data: {
-            labels: [
-              'Good',
-              'Oke',
-              'Bad'
+      var socket = io();
+
+      var delta = 0;
+      var currentBarWidth = 0;
+
+      socket.on('value', function (value) {
+        delta = value / 100;
+        updateChart(value);
+      });
+
+      setInterval(function () {
+        currentBarWidth += delta;
+        document.querySelector('.progress-bar span').style.width = currentBarWidth + '%';
+      }, 1000);
+
+      var chart = new Chart(appliances[0], {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'Low',
+            'Medium',
+            'High'
+          ],
+          datasets: [{
+            data: [0, 0, 0, 100],
+            backgroundColor: [
+              'hsl(145, 67%, 60%)',
+              'hsl(48, 90%, 65%)',
+              'hsl(351, 87%, 65%)'
             ],
-            datasets: [{
-              data: [<%= data %>],
-              backgroundColor: [
-                'hsl(145, 67%, 60%)',
-                'hsl(48, 90%, 65%)',
-                'hsl(351, 87%, 65%)'
-              ],
-              hoverBackgroundColor: [
-                'hsl(145, 67.4%, 46.9%)',
-                'hsl(48, 90%, 51%)',
-                'hsl(351, 87%, 56%)'
-              ]
-            }]
-          }
-        });
+            hoverBackgroundColor: [
+              'hsl(145, 67.4%, 46.9%)',
+              'hsl(48, 90%, 51%)',
+              'hsl(351, 87%, 56%)'
+            ]
+          }]
+        }
+      });
+
+      /**
+       * Replace the doughnut chart with a new one with updated data
+       * @param  {Number} value Filled percentage
+       */
+      function updateChart(value) {
+        value = Number(value);
+        var data = [];
+
+        // This could probably be done nicer with something like %
+        //   but time constraints..  ¯\_(ツ)_/¯
+        if (value > 33.3 && value < 66.6) {
+          data[0] = 33.3;
+          data[1] = value - 33.3;
+          data[2] = 0;
+        } else if (value > 66.6) {
+          data[0] = 33.3;
+          data[1] = 33.3;
+          data[2] = value - 66.6;
+        } else {
+          data[0] = value;
+          data[1] = 0;
+          data[2] = 0;
+        }
+
+        data[3] = 100 - data[0] - data[1] - data[2];
+
+        chart.data.datasets[0].data = data;
+        chart.update();
       }
     </script>
   </body>

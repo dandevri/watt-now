@@ -1,0 +1,18 @@
+.empty {
+  text-align: center;
+  width: 100%;
+}
+
+.emoji {
+  font-size: 10em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
