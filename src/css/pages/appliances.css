@@ -31,7 +31,7 @@ main {
 main a {
   color: #5C637A;
   opacity: .65;
-  transition: .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 main a:hover {
