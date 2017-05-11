@@ -3,39 +3,45 @@ var User = require('./models/user');
 var Festival = require('./models/festival');
 var Data = require('./models/data');
 
-// Foodtrucks
-var burgerChef = new User({
-  username: 'BurgerChef'
-});
-
-var kaasTruck = new User({
-  username: 'KaasTruck'
-});
-
-var asianKitchen = new User({
-  username: 'AsianKitchen'
-});
-
 // Festival
 var dgtl = new Festival({
   festival: 'DGTL',
-  date: '11-05-2017'
+  date: '11-05-2017',
+  image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'
 });
 
 var strafwerk = new Festival({
   festival: 'Strafwerk',
-  date: '12-05-2017'
+  date: '12-05-2017',
+  image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'
 });
 
 var pleinvrees = new Festival({
   festival: 'Pleinvrees',
-  date: '13-05-2017'
+  date: '13-05-2017',
+  image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'
+});
+
+// Foodtrucks
+var burgerChef = new User({
+  username: 'BurgerChef',
+  festival: [dgtl._id, strafwerk._id, pleinvrees._id]
+});
+
+var kaasTruck = new User({
+  username: 'KaasTruck',
+  festival: []
+});
+
+var asianKitchen = new User({
+  username: 'AsianKitchen',
+  festival: []
 });
 
 // Data
 var data = new Data({
   userId: burgerChef._id,
-  festivalId: dgtl._id,
+  festivalId: [dgtl._id, pleinvrees._id],
   appliances: []
 });
 

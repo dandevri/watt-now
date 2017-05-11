@@ -10,11 +10,11 @@
   <body>
     <%- include ../partials/header -%>
     <main>
-      <h1>Welcome <%= user %></h1>
+      <h1>Welcome <%= user.username %></h1>
       <h2>Your festivals</h2>
       <ul>
         <% festivals.map(function (festival) { %>
-          <li><span style="background-image: url(<%= festival.image %>)"></span><span><%= festival.name %></span><span><%= festival.date %></span></li>
+          <a href="/dashboard/<%= user._id %>/<%= festival._id %>"><li><span style="background-image: url(<%= festival.image %>)"></span><span><%= festival.festival %></span><span><%= festival.date %></span></li></a>
         <% }) %>
       </ul>
     </main>

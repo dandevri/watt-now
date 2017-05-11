@@ -1,17 +1,17 @@
 var mongoose = require('mongoose');
 
 var DataSchema = mongoose.Schema({
-  festivalId: {
-    type: mongoose.Schema.Types.String,
-    ref: 'festival'
-  },
+  festivalId: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'festivals'
+  }],
   userId: {
     type: mongoose.Schema.Types.String,
-    ref: 'user'
+    ref: 'users'
   },
   appliances: []
 });
 
-var DataModel = mongoose.model('data', DataSchema);
+var Data = mongoose.model('datas', DataSchema);
 
-module.exports = DataModel;
+module.exports = Data;

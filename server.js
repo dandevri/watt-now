@@ -43,13 +43,22 @@ app.get('/', function (req, res) {
       return res.send(err);
     }
     console.log(records);
-    res.render('pages/home', {user: req.session.user.username, festivals: records[0].festival});
+    res.render('pages/home', {user: records[0], festivals: records[0].festival});
   });
-
 });
 
 app.get('/dashboard/:user/:festival', function (req, res) {
-  res.render('pages/dashboard', {data: [50, 250], festival: 'Rollende keuken', totalUsage: '34%', urlDash: req.url, urlAppl: `/appliances/${req.params.user}/${req.params.festival}`, appliances: [{name: 'Koffie'}, {name: 'Frituur'}]});
+    console.log(req.params);
+    // 😘 Rijk
+    var Festival = mongoose.model('festivals');
+    var collection = Festival.find();
+    collection.where({_id: req.params.festival});
+    collection.exec(function (error, records) {
+      if(error) {
+        return res.send(error);
+      }
+      res.render('pages/dashboard', {data: [50, 250], festival: records[0].festival, totalUsage: '34%', urlDash: req.url, urlAppl: `/appliances/${req.params.user}/${req.params.festival}`, appliances: [{name: 'Koffie'}, {name: 'Frituur'}]});
+    });
 });
 
 app.get('/register', function (req, res) {
