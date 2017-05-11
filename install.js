@@ -18,15 +18,18 @@ var asianKitchen = new User({
 
 // Festival
 var dgtl = new Festival({
-  festival: 'DGTL'
+  festival: 'DGTL',
+  date: '11-05-2017'
 });
 
 var strafwerk = new Festival({
-  festival: 'Strafwerk'
+  festival: 'Strafwerk',
+  date: '12-05-2017'
 });
 
 var pleinvrees = new Festival({
-  festival: 'Pleinvrees'
+  festival: 'Pleinvrees',
+  date: '13-05-2017'
 });
 
 // Data

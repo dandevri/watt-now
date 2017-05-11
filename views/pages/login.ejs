@@ -10,10 +10,10 @@
   <body>
     <img src="img/watt-now_logo_blue.svg">
     <h1>Login</h1>
-    <form action="">
+    <form method="POST" action="/login">
       <label for="companyName">Food Truck</label>
-      <input type="text" id="companyName" placeholder="Naam food truck">
-      <button formaction="/login" type="submit" name="login" value="login">Log in</button>
+      <input name="username" type="text" id="companyName" placeholder="Naam food truck">
+      <button type="submit" name="login" value="login">Log in</button>
       <a href="/register">Register</a>
     </form>
   </body>
