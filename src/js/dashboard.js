@@ -5,9 +5,9 @@ for (let i = 0; i < appliances.length; i++) {
     type: 'doughnut',
     data: {
       labels: [
-        'Red',
-        'Blue',
-        'Yellow'
+        'Good',
+        'Oke',
+        'Bad'
       ],
       datasets: [{
         data: [300, 50, 100],
