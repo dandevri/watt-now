@@ -14,26 +14,28 @@
     <a class="active" href="<%= urlAppl %>">Appliances</a>
   </nav>
   <main>
-    <fieldset class="appliances">
-      <div class="field">
-        <label for="appliance">Appliance name</label>
-        <input type="text">
-        <label for="voltage">Voltage <strong>(v)</strong></label>
-        <input type="number" min="0">
-        <label for="energy">Ampere <strong>(a)</strong></label>
-        <input type="number" min="0">
-        <label for="power">Watt <strong>(w)</strong></label>
-        <input type="number" min="0">
-        <label for="quantity">Quantity</label>
-        <input type="number" min="0">
+    <form method="post">
+      <fieldset class="appliances">
+        <div class="field">
+          <label for="appliance">Appliance name</label>
+          <input type="text">
+          <label for="voltage">Voltage <strong>(v)</strong></label>
+          <input type="number" min="0">
+          <label for="energy">Ampere <strong>(a)</strong></label>
+          <input type="number" min="0">
+          <label for="power">Watt <strong>(w)</strong></label>
+          <input type="number" min="0">
+          <label for="quantity">Quantity</label>
+          <input type="number" min="0">
+        </div>
+      </fieldset>
+      <div class="buttons">
+        <button type="button" id='add'>✚ Add</button>
+        <button type="button" id='remove'>✖ Remove</button>
       </div>
-    </fieldset>
+      <button type="submit" name="appliance">Submit appliances</button>
+    </form>
   </main>
-  <div class="buttons">
-    <button id='add'>✚ Add</button>
-    <button id='remove'>✖ Remove</button>
-  </div>
-
 
   <%- include ../partials/footer -%>
   <script type="text/javascript" src="/js/appliances.js"></script>
