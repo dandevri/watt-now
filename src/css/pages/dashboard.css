@@ -1,0 +1,67 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #F8F9FB;
+  padding: 1em;
+  flex: 1;
+  text-align: center;
+  background: #B2C9D6;
+  transition: .3s ease-in-out;
+}
+
+nav a:not(.active) {
+  opacity: .75;
+}
+
+nav a:not(.active):hover {
+  opacity: .85;
+}
+
+main {
+  padding: 0 2em;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 2.5em;
+  background: #E9EAEC;
+  border-radius: .5em;
+  border: 1px solid #5C637A;
+  position: relative;
+  margin: 2.5em 0 0;
+}
+
+.progress-bar::before,
+.progress-bar::after {
+  content: '0%';
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+}
+
+.progress-bar::after {
+  content: '100%';
+  left: initial;
+  right: 0;
+}
+
+.progress-bar span {
+  height: 100%;
+  background: #F12D4B;
+  display: block;
+  border-radius: .5em;
+}
+
+.appliances {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.charts {
+  min-width: 5em;
+}
