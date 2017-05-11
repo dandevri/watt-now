@@ -15,14 +15,14 @@ OpenWiFi hotspot;
 
 void printDebugMessage(String message) {
 #ifdef DEBUG_MODE
-  Serial.println(String(PROJECT_SHORT_NAME) + ": " + message);
+//  Serial.println(String(PROJECT_SHORT_NAME) + ": " + message);
 #endif
 }
 
 void setup()
 {
 
-  Serial.begin(115200);
+//  Serial.begin(115200);
 
   WiFiManager wifiManager;
   int counter = 0;
@@ -44,7 +44,7 @@ void loop()
   // Convert 0...1024 to 0...100
   sendExpressRotate(potentioMeter / 977.0 * 100);
 
-  delay(1000);
+  delay(500);
 }
 
 void sendExpressRotate(float energyLevel)
