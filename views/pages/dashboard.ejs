@@ -18,7 +18,7 @@
       <section>
         <h1>Consumed</h1>
         <article class="progress-bar">
-          <span style="width: <%= totalUsage %>"></span>
+          <span style="width: 0%"></span>
         </article>
       </section>
       <section>
@@ -38,9 +38,18 @@
 
       var socket = io();
 
+      var delta = 0;
+      var currentBarWidth = 0;
+
       socket.on('value', function (value) {
+        delta = value / 100;
         updateChart(value);
       });
+
+      setInterval(function () {
+        currentBarWidth += delta;
+        document.querySelector('.progress-bar span').style.width = currentBarWidth + '%';
+      }, 1000);
 
       var chart = new Chart(appliances[0], {
         type: 'doughnut',
@@ -98,8 +107,6 @@
         }
 
         data[3] = 100 - data[0] - data[1] - data[2];
-
-        console.log(data);
 
         chart = new Chart(appliances[0], {
           type: 'doughnut',
