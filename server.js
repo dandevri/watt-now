@@ -26,7 +26,7 @@ app.get('/register', function (req, res) {
 });
 
 app.get('/appliances/:user/:festival', function (req, res) {
-  res.render('pages/appliances');
+  res.render('pages/appliances', {urlAppl: req.url, urlDash: `/dashboard/${req.params.user}/${req.params.festival}`});
 });
 
 app.listen(port, host, function () {
