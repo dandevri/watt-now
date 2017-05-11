@@ -24,10 +24,17 @@
       <section>
         <h1>Appliances</h1>
         <article class="appliances">
-
+          <% appliances.map(function (appliance) { %>
+            <div>
+              <h1><%= appliance.name %></h1>
+              <canvas class="charts" id="<%= appliance.name %>-chart"></div>
+            </div>
+          <% }) %>
         </article>
       </section>
     </main>
     <%- include ../partials/footer -%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js" charset="utf-8"></script>
+    <script src="/js/dashboard.js" charset="utf-8"></script>
   </body>
 </html>
