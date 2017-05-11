@@ -10,7 +10,7 @@ app.use(express.static('src'))
   .set('view engine', 'ejs');
 
 app.get('/dashboard/:user/:festival', function (req, res) {
-  res.render('pages/dashboard', {festival: 'Rollende keuken', totalUsage: '34%', url: req.url, appliances: [{name: 'Koffie'}, {name: 'Frituur'}]});
+  res.render('pages/dashboard', {data: [50, 250], festival: 'Rollende keuken', totalUsage: '34%', url: req.url, appliances: [{name: 'Koffie'}, {name: 'Frituur'}]});
 });
 
 app.get('/login', function (req, res) {
