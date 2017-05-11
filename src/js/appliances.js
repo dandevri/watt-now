@@ -1,8 +1,10 @@
 document.getElementById('add').addEventListener('click', addFieldset);
 document.getElementById('remove').addEventListener('click', removeFieldset);
 
+var appliances = document.getElementsByClassName('appliances');
+
 function addFieldset() {
-  document.getElementsByClassName('appliances')[document.getElementsByClassName('appliances').length - 1].insertAdjacentHTML('afterend',
+  appliances[appliances.length - 1].insertAdjacentHTML('afterend',
   `<fieldset class="appliances">
     <div class="field">
       <label for="appliance">Appliance name</label>
@@ -20,9 +22,9 @@ function addFieldset() {
 }
 
 function removeFieldset() {
-  if (document.getElementsByClassName('appliances').length === 1) {
+  if (appliances.length === 1) {
     return false;
   }
 
-  document.getElementsByClassName('appliances')[document.getElementsByClassName('appliances').length - 1].remove();
+  appliances[appliances.length - 1].remove();
 }
