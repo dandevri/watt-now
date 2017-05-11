@@ -29,6 +29,10 @@ app.get('/appliances/:user/:festival', function (req, res) {
   res.render('pages/appliances', {urlAppl: req.url, urlDash: `/dashboard/${req.params.user}/${req.params.festival}`});
 });
 
+app.get('/subscription', function (req, res) {
+  res.render('pages/subscription', {label: 'label a', subscription: {cost: '€439,-', size: '2300Kwh'}});
+});
+
 app.listen(port, host, function () {
   console.log('Server running', host, ':', port);
 });
