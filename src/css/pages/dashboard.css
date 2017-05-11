@@ -55,3 +55,13 @@ main {
   display: block;
   border-radius: .5em;
 }
+
+.appliances {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.charts {
+  min-width: 5em;
+}
