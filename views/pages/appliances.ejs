@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <%- include ../partials/meta -%>
+    <title>Add aplliances</title>
+    <link rel="stylesheet" type="text/css" href="/css/pages/appliances.css">
+  </head>
+
+  <body>
+  <%- include ../partials/header -%>
+
+  <main>
+    <fieldset class="aplliances">
+      <div class="field">
+        <label for="appliance">Appliance name</label>
+        <input type="text">
+        <label for="voltage">Voltage <strong>(v)</strong></label>
+        <input type="number" min="0">
+        <label for="energy">Ampere <strong>(a)</strong></label>
+        <input type="number" min="0">
+        <label for="power">Watt <strong>(w)</strong></label>
+        <input type="number" min="0">
+        <label for="quantity">Quantity</label>
+        <input type="number" min="0">
+      </div>
+    </fieldset>
+  </main>
+  <div class="buttons">
+    <button id='add'>✚ Add</button>
+    <button id='remove'>✖ Remove</button>
+  </div>
+
+
+  <%- include ../partials/footer -%>
+  <script type="text/javascript" src="/js/appliances.js"></script>
+  </body>
+</html>

@@ -25,6 +25,10 @@ app.get('/register', function (req, res) {
   res.render('pages/register');
 });
 
+app.get('/add/appliances', function (req, res) {
+  res.render('pages/appliances');
+});
+
 app.listen(port, host, function () {
   console.log('Server running', host, ':', port);
 });
