@@ -13,7 +13,7 @@ a {
   color: #E9EAEC;
 }
 
-a:hover {
+header a:hover {
   border-bottom: 1px solid #F8F9FB;
 }
 
@@ -40,6 +40,7 @@ button {
   transition: all 0.2s;
   background-color: #060c36;
   color: #fff;
+  margin: 0em 1em;
 }
 
 button:hover {
@@ -80,4 +81,31 @@ footer {
   text-align: center;
   opacity: .5;
   color: #5C637A;
+}
+
+/* ==========================================================================
+   Tab navigation
+   ========================================================================== */
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #F8F9FB;
+  padding: 1em;
+  flex: 1;
+  text-align: center;
+  background: #B2C9D6;
+  transition: .3s ease-in-out;
+}
+
+nav a:not(.active) {
+  opacity: .75;
+}
+
+nav a:not(.active):hover {
+  opacity: .85;
 }

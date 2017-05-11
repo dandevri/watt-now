@@ -31,7 +31,11 @@ app.get('/', function (req, res) {
   if(!req.session.user) {
     return res.redirect('/login');
   }
-  res.render('index');
+  res.render('pages/home', {user: 'foodChef', festivals: [{name: 'rollende keukens', date: '10 mei', image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'}]});
+});
+
+app.get('/dashboard/:user/:festival', function (req, res) {
+  res.render('pages/dashboard', {data: [50, 250], festival: 'Rollende keuken', totalUsage: '34%', urlDash: req.url, urlAppl: `/appliances/${req.params.user}/${req.params.festival}`, appliances: [{name: 'Koffie'}, {name: 'Frituur'}]});
 });
 
 app.get('/register', function (req, res) {
@@ -87,8 +91,11 @@ app.get('/festival', function (req, res) {
   }
 
   return res.status(200).send('Welcome');
-
   // res.render('pages/home', {user: 'foodChef', festivals: [{name: 'rollende keukens', date: '10 mei', image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'}]});
+});
+
+app.get('/appliances/:user/:festival', function (req, res) {
+  res.render('pages/appliances', {urlAppl: req.url, urlDash: `/dashboard/${req.params.user}/${req.params.festival}`});
 });
 
 app.listen(port, host, function () {

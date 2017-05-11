@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Input styles
+   ========================================================================== */
+input[type="number"] {
+  max-width: 5em;
+}
+
+input {
+  padding: 0.4em;
+  margin-right: 0.8em;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+fieldset {
+  margin: 2em 0em;
+  padding: 1em;
+  border: 0;
+  background-color: #B2C9D6;gf
+}
+
+main {
+  margin: 1em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
