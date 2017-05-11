@@ -10,7 +10,19 @@
   <body>
     <%- include ../partials/header -%>
     <main>
-
+      <section class="current-label">
+        <h1>Current Label</h1>
+        <article class="<%= label %>">
+          <span><%= label %></span>
+        </article>
+      </section>
+      <section class="current-subscription">
+        <h1>Current Subscription</h1>
+        <article>
+          <span><%= subscription.size %></span>
+          <span><%= subscription.cost %></span>
+        </article>
+      </section>
     </main>
     <%- include ../partials/footer -%>
   </body>

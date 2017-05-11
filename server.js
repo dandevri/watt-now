@@ -30,7 +30,7 @@ app.get('/add/appliances', function (req, res) {
 });
 
 app.get('/subscription', function (req, res) {
-  res.render('pages/subscription');
+  res.render('pages/subscription', {label: 'label a', subscription: {cost: '€439,-', size: '2300Kwh'}});
 });
 
 app.listen(port, host, function () {
