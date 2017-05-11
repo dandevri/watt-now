@@ -82,9 +82,9 @@ Please read [Contributing](CONTRIBUTING.md) for details on how to contribute to 
 To see a list of everybody who participated go to the [Contributors](https://github.com/dandevri/watt-now/graphs/contributors) page.
 
 ## 👨🏼‍💻 Team
-![Ian Stewart](https://avatars2.githubusercontent.com/u/14125280?v=3&s=400) | ![Mirza van Meerwijk](https://avatars2.githubusercontent.com/u/12242967?v=3&s=400) | ![Danny de Vries](https://avatars2.githubusercontent.com/u/22084444?v=3&s=400)
----|---|---
-[Ian Stewart](https://github.com/IanCStewart) | [Mirza van Meerwijk](https://github.com/Mimaaa) | [Danny de Vries](https://github.com/dandevri)
+![Ian Stewart](https://avatars2.githubusercontent.com/u/14125280?v=3&s=400) | ![Mirza van Meerwijk](https://avatars2.githubusercontent.com/u/12242967?v=3&s=400) | ![Danny de Vries](https://avatars2.githubusercontent.com/u/22084444?v=3&s=400) | ![Rijk van Zantem](https://avatars2.githubusercontent.com/u/9141017?v=3&s=400)
+---|---|---|---
+[Ian Stewart](https://github.com/IanCStewart) | [Mirza van Meerwijk](https://github.com/Mimaaa) | [Danny de Vries](https://github.com/dandevri) | [Rijk van Zanten](https://github.com/rijkvanzanten)
 
 ## 📃 License
 This project is licensed under the [MIT](LICENSE.MD) License
