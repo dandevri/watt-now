@@ -73,3 +73,10 @@ mongod
 ```
 $ npm run fixtures
 ```
+
+## :white_check_mark: Todo's
+To see all upcoming todo's and features please navigate to the [GitHub Projects](https://github.com/dandevri/watt-now/projects/) page of this repo.
+
+## :page_facing_up: Contributing
+Please read [Contributing](CONTRIBUTING.md) for details on how to contribute to this project.
+To see a list of everybody who participated go to the [Contributors](https://github.com/dandevri/watt-now/graphs/contributors) page.
