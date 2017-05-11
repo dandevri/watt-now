@@ -20,5 +20,9 @@ function addFieldset() {
 }
 
 function removeFieldset() {
+  if (document.getElementsByClassName('appliances').length === 1) {
+    return false;
+  }
+
   document.getElementsByClassName('appliances')[document.getElementsByClassName('appliances').length - 1].remove();
 }
