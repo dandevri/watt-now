@@ -25,7 +25,7 @@ app.get('/register', function (req, res) {
   res.render('pages/register');
 });
 
-app.get('/add/appliances', function (req, res) {
+app.get('/appliances/:user/:festival', function (req, res) {
   res.render('pages/appliances');
 });
 
