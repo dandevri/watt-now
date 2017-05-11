@@ -76,7 +76,7 @@ void loop()
     sendExpressRotate("100");
   }
 
-  delay(100);
+  delay(1000);
  
 }
 

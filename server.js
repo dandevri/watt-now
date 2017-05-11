@@ -23,15 +23,6 @@ app.get('/', function (req, res) {
 
 app.get('/api/energy/', energyLevel);
 
-function energyLevel (req, res) {
-  console.log('Received energy ', req.query.level, ' request');
-  if (req.query.level === '10') {
-    console.log('10 procent');
-  } else if (req.query.level === '20') {
-    console.log('20 procent');
-  }
-}
-
 app.get('/register', function (req, res) {
   res.render('pages/register');
 });
@@ -47,3 +38,42 @@ app.get('/subscription', function (req, res) {
 app.listen(port, host, function () {
   console.log('Server running', host, ':', port);
 });
+
+function energyLevel(req, res) {
+  var level = req.query.level;
+  console.log('Received energy ' + level + ' request');
+  switch (level) {
+    case '10':
+      res.send('10 procent');
+      break;
+    case '20':
+      res.send('20 procent');
+      break;
+    case '30':
+      res.send('30 procent');
+      break;
+    case '40':
+      res.send('40 procent');
+      break;
+    case '50':
+      res.send('50 procent');
+      break;
+    case '60':
+      res.send('60 procent');
+      break;
+    case '70':
+      res.send('70 procent');
+      break;
+    case '80':
+      res.send('80 procent');
+      break;
+    case '90':
+      res.send('90 procent');
+      break;
+    case '100':
+      res.send('100 procent');
+      break;
+    default:
+      res.send('Procent undefined');
+  }
+}
