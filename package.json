@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm i && node server.js",
     "start:dev": "npm i && nodemon server.js",
-    "buildDb": "node install.js",
+    "fixtures": "node install.js",
     "clearDb": "node cleardatabase.js",
     "lint": "xo *.js"
   },

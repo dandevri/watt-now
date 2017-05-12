@@ -128,13 +128,12 @@ app.get('/appliances/:user/:festival', function (req, res) {
 });
 
 app.post('/appliances/:user/:festival', function (req, res) {
-
   var Data = mongoose.model('datas');
 
   Data.findByIdAndUpdate(
     req.session.user._id,
-    {$push: {"appliances": {quantity: req.body.quantity, watt: req.body.watt, ampere: req.body.ampere, voltage: req.body.voltage, appliance: req.body.appliance}}},
-    {safe: true, upsert: true, new : true},
+    {$push: {appliances: {quantity: req.body.quantity, watt: req.body.watt, ampere: req.body.ampere, voltage: req.body.voltage, appliance: req.body.appliance}}},
+    {safe: true, upsert: true, new: true},
     function(err) {
       console.log(err);
     }
