@@ -1,24 +1,30 @@
-var getFieldset = document.getElementById('add').addEventListener('click', addFieldset);
-var getButton = document.getElementById('remove').addEventListener('click', removeFieldset);
+document.getElementById('add').addEventListener('click', addFieldset);
+document.getElementById('remove').addEventListener('click', removeFieldset);
+
+var appliances = document.getElementsByClassName('appliances');
 
 function addFieldset() {
-  document.getElementsByTagName('main')[0].innerHTML +=
-  `<fieldset class="aplliances">
+  appliances[appliances.length - 1].insertAdjacentHTML('afterend',
+  `<fieldset class="appliances">
     <div class="field">
       <label for="appliance">Appliance name</label>
-      <input type="text">
+      <input id="appliance" type="text">
       <label for="voltage">Voltage <strong>(v)</strong></label>
-      <input type="number" min="0">
+      <input id="voltage" type="number" min="0">
       <label for="energy">Ampere <strong>(a)</strong></label>
-      <input type="number" min="0">
+      <input id="energy" type="number" min="0">
       <label for="power">Watt <strong>(w)</strong></label>
-      <input type="number" min="0">
+      <input id="power" type="number" min="0">
       <label for="quantity">Quantity</label>
-      <input type="number" min="0">
+      <input id="quantity" type="number" min="0">
     </div>
-  </fieldset>`;
+  </fieldset>`);
 }
 
 function removeFieldset() {
-  document.getElementsByTagName('fieldset')[0].remove();
+  if (appliances.length === 1) {
+    return false;
+  }
+
+  appliances[appliances.length - 1].remove();
 }

@@ -1,5 +1,15 @@
 main {
-  padding: 0 2em;
+  margin: 1em;
+}
+
+main a {
+  color: #5C637A;
+  opacity: .65;
+  transition: opacity .3s ease-in-out;
+}
+
+main a:hover {
+  opacity: 1;
 }
 
 .progress-bar {
