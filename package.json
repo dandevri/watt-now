@@ -1,6 +1,6 @@
 {
   "name": "watt-now",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Project for watt-now 🔌️⚡️",
   "main": "index.js",
   "scripts": {
