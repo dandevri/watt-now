@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <%- include ../partials/meta -%>
+    <title>Add appliances</title>
+    <link rel="stylesheet" type="text/css" href="/css/pages/appliances.css">
+  </head>
+
+  <body>
+  <%- include ../partials/header -%>
+  <nav>
+    <a href="<%= urlDash %>">Live dashboard</a>
+    <a class="active" href="<%= urlAppl %>">Appliances</a>
+  </nav>
+  <main>
+    <a href="/">↤ Go Home</a>
+    <form method="post">
+      <fieldset class="appliances">
+        <div class="field">
+          <label for="appliance">Appliance name</label>
+          <input id="appliance" type="text">
+          <label for="voltage">Voltage <strong>(v)</strong></label>
+          <input id="voltage" type="number" min="0">
+          <label for="energy">Ampere <strong>(a)</strong></label>
+          <input id="energy" type="number" min="0">
+          <label for="power">Watt <strong>(w)</strong></label>
+          <input id="power" type="number" min="0">
+          <label for="quantity">Quantity</label>
+          <input id="quantity" type="number" min="0">
+        </div>
+      </fieldset>
+      <div class="buttons">
+        <button type="button" id='add'>✚ Add</button>
+        <button type="button" id='remove'>✖ Remove</button>
+      </div>
+      <button type="submit">Submit appliances</button>
+    </form>
+  </main>
+
+  <%- include ../partials/footer -%>
+  <script type="text/javascript" src="/js/appliances.js"></script>
+  </body>
+</html>

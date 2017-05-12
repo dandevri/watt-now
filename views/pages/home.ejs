@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <%- include ../partials/meta -%>
+    <link rel="stylesheet" type="text/css" href="/css/pages/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/pages/empty-state.css">
+    <title>Festivals</title>
+  </head>
+
+  <body>
+    <%- include ../partials/header -%>
+    <main>
+      <h1>Welcome <%= user %></h1>
+      <h2>Your festivals</h2>
+      <% if (festivals.length < 1) { %>
+        <%- include ../partials/empty-states/festival-empty.ejs -%>
+      <% } else { %>
+      <ul>
+        <% festivals.map(function (festival) { %>
+          <li><span style="background-image: url(<%= festival.image %>)"></span><span><%= festival.name %></span><span><%= festival.date %></span></li>
+        <% }) %>
+      </ul>
+      <% } %>
+    </main>
+    <%- include ../partials/footer -%>
+  </body>
+</html>

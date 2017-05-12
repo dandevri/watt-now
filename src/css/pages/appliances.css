@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Input styles
+   ========================================================================== */
+input[type="number"] {
+  max-width: 5em;
+}
+
+input {
+  padding: 0.4em;
+  margin-right: 0.8em;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+fieldset {
+  margin: 2em 0em;
+  padding: 1em;
+  border: 0;
+  background-color: #B2C9D6;
+}
+
+main {
+  margin: 1em;
+}
+
+main a {
+  color: #5C637A;
+  opacity: .65;
+  transition: opacity .3s ease-in-out;
+}
+
+main a:hover {
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
