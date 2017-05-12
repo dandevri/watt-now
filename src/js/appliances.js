@@ -8,15 +8,15 @@ function addFieldset() {
   `<fieldset class="appliances">
     <div class="field">
       <label for="appliance">Appliance name</label>
-      <input id="appliance" type="text">
+      <input name="appliance" id="appliance" type="text">
       <label for="voltage">Voltage <strong>(v)</strong></label>
-      <input id="voltage" type="number" min="0">
+      <input name="voltage" id="voltage" type="number" min="0">
       <label for="energy">Ampere <strong>(a)</strong></label>
-      <input id="energy" type="number" min="0">
+      <input name="ampere" id="energy" type="number" min="0">
       <label for="power">Watt <strong>(w)</strong></label>
-      <input id="power" type="number" min="0">
+      <input name="watt" id="power" type="number" min="0">
       <label for="quantity">Quantity</label>
-      <input id="quantity" type="number" min="0">
+      <input name="quantity" id="quantity" type="number" min="0">
     </div>
   </fieldset>`);
 }
