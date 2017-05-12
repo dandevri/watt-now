@@ -141,6 +141,17 @@ app.post('/appliances/:user/:festival', function (req, res) {
 
   res.redirect(req.url);
 
+  // var userId = req.params.user;
+  // var fesitvalId = req.params.festival;
+  //
+  // Data.findOne({userId: user, fesitvalId: festival}, function(err, user) {
+  //   if(err) {
+  //     console.log(err);
+  //     return res.send('error');
+  //   }
+  // });
+
+
   // In progress: if there are no appliances in db => add array, else => update appliances array with push
   // var Data = mongoose.model('datas');
   //

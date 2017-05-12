@@ -41,7 +41,7 @@ var asianKitchen = new User({
 // Data
 var data = new Data({
   userId: burgerChef._id,
-  festivalId: [dgtl._id, pleinvrees._id],
+  festivalId: dgtl._id,
   appliances: [{
     appliance: 'frituur',
     voltage: '100',

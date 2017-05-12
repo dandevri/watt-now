@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
 var DataSchema = mongoose.Schema({
-  festivalId: [{
-    type: mongoose.Schema.Types.ObjectId,
+  festivalId: {
+    type: mongoose.Schema.Types.String,
     ref: 'festivals'
-  }],
+  },
   userId: {
     type: mongoose.Schema.Types.String,
     ref: 'users'
