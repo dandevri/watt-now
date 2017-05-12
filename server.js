@@ -37,6 +37,10 @@ app.get('/subscription', function (req, res) {
   res.render('pages/subscription', {label: 'label a', subscription: {cost: '€439,-', size: '2300Kwh'}});
 });
 
+app.get('/chart/:appliance', function (req, res) {
+  res.render('pages/chart', {data: [65, 59, 80, 81, 56, 55, 40]});
+});
+
 var server = http.Server(app);
 var io = socket(server);
 
