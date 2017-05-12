@@ -127,30 +127,56 @@ app.get('/appliances/:user/:festival', function (req, res) {
   res.render('pages/appliances', {urlAppl: req.url, urlDash: `/dashboard/${req.params.user}/${req.params.festival}`});
 });
 
-app.post('/appliances', function (req, res) {
-  var userId = req.session.user;
-  var appName = req.body.appName;
-  var voltage = req.body.voltage;
-  var ampere = req.body.ampere;
-  var watt = req.body.watt;
-  var quantity = req.body.quantity;
+app.post('/appliances/:user/:festival', function (req, res) {
 
   var Data = mongoose.model('datas');
 
-  var newData = new Data();
-  newData.userId = userId;
-  newData.appliances.appName = appName;
-  newData.appliances.voltage = voltage;
-  newData.appliances.ampere = ampere;
-  newData.appliances.watt = watt;
-  newData.appliances.quantity = quantity;
-  newData.save(function(err, savedData) {
-    if(err) {
+  Data.findByIdAndUpdate(
+    req.session.user._id,
+    {$push: {"appliances": {quantity: req.body.quantity, watt: req.body.watt, ampere: req.body.ampere, voltage: req.body.voltage, appliance: req.body.appliance}}},
+    {safe: true, upsert: true, new : true},
+    function(err) {
       console.log(err);
-      return res.send('error');
     }
-    res.redirect('/appliances/:user/:festival');
-  });
+  );
+
+  res.redirect(req.url);
+
+  // In progress: if there are no appliances in db => add array, else => update appliances array with push
+  // var Data = mongoose.model('datas');
+  //
+  // Data.findOne({appliances: appliance}, function (err, user) {
+  //   if(err) {
+  //     console.log(err);
+  //     return res.send('error');
+  //   }
+  //   if(!appliances) {
+  //     var userId = req.session.user;
+  //     var appliance = req.body.appliance;
+  //     var voltage = req.body.voltage;
+  //     var ampere = req.body.ampere;
+  //     var watt = req.body.watt;
+  //     var quantity = req.body.quantity;
+  //
+  //     var newData = new Data();
+  //
+  //     newData.userId = userId;
+  //     newData.appliances.appliance = appliance;
+  //     newData.appliances.voltage = voltage;
+  //     newData.appliances.ampere = ampere;
+  //     newData.appliances.watt = watt;
+  //     newData.appliances.quantity = quantity;
+  //     newData.save();
+  //   }
+  //   Data.findByIdAndUpdate(
+  //     req.session.user._id,
+  //     {$push: {"appliances": {appliance: req.body.appliance, voltage: req.body.voltage, ampere: req.body.ampere, watt: req.body.watt, quantity: req.body.quantity}}},
+  //     {safe: true, upsert: true, new : true},
+  //     function(err, model) {
+  //       console.log(err);
+  //     });
+  //   res.redirect('/appliances/:user/:festival');
+  // });
 });
 
 app.get('/subscription', function (req, res) {

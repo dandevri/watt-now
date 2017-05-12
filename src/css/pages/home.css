@@ -20,6 +20,10 @@ main ul li {
   color: #F8F9FB;
 }
 
+main ul li:hover {
+  background-color: #00ABEB;
+}
+
 main ul span:not(:first-of-type) {
   max-width: 100%;
   overflow: hidden;

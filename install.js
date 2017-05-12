@@ -7,19 +7,19 @@ var Data = require('./models/data');
 var dgtl = new Festival({
   festival: 'DGTL',
   date: '11-05-2017',
-  image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'
+  image: 'http://hennesy.cc/wp-content/uploads/160327_dgtlNL_logo-150x150.png'
 });
 
 var strafwerk = new Festival({
   festival: 'Strafwerk',
   date: '12-05-2017',
-  image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'
+  image: 'https://festivalfans.nl/wp-content/uploads/2014/07/straf_werk-festival.png'
 });
 
 var pleinvrees = new Festival({
   festival: 'Pleinvrees',
   date: '13-05-2017',
-  image: 'http://www.recensiequeens.nl/wp-content/uploads/2014/05/rollende-keukens.jpg'
+  image: 'http://www.guestzone.nl/gfx/user_photos/37199/logo_f7d0217e956986075613.jpg'
 });
 
 // Foodtrucks
@@ -43,14 +43,14 @@ var data = new Data({
   userId: burgerChef._id,
   festivalId: [dgtl._id, pleinvrees._id],
   appliances: [{
-    appName: 'frituur',
+    appliance: 'frituur',
     voltage: '100',
     ampere: '2',
     watt: '150',
     quantity: '2'
   },
   {
-    appName: 'koffiezetapparaat',
+    appliance: 'koffiezetapparaat',
     voltage: '200',
     ampere: '5',
     watt: '300',

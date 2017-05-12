@@ -10,7 +10,7 @@ var DataSchema = mongoose.Schema({
     ref: 'users'
   },
   appliances: [{
-    appName: String,
+    appliance: String,
     voltage: Number,
     ampere: Number,
     watt: Number,
