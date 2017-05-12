@@ -42,7 +42,20 @@ var asianKitchen = new User({
 var data = new Data({
   userId: burgerChef._id,
   festivalId: [dgtl._id, pleinvrees._id],
-  appliances: []
+  appliances: [{
+    appName: 'frituur',
+    voltage: '100',
+    ampere: '2',
+    watt: '150',
+    quantity: '2'
+  },
+  {
+    appName: 'koffiezetapparaat',
+    voltage: '200',
+    ampere: '5',
+    watt: '300',
+    quantity: '1'
+  }]
 });
 
 Promise.all([

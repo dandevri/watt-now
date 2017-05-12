@@ -17,19 +17,20 @@
     <fieldset class="aplliances">
       <div class="field">
         <label for="appliance">Appliance name</label>
-        <input type="text">
+        <input name="appName" type="text">
         <label for="voltage">Voltage <strong>(v)</strong></label>
-        <input type="number" min="0">
+        <input name="voltage" type="number" min="0">
         <label for="energy">Ampere <strong>(a)</strong></label>
-        <input type="number" min="0">
+        <input name="ampere" type="number" min="0">
         <label for="power">Watt <strong>(w)</strong></label>
-        <input type="number" min="0">
+        <input name="watt" type="number" min="0">
         <label for="quantity">Quantity</label>
-        <input type="number" min="0">
+        <input name="quantity" type="number" min="0">
       </div>
     </fieldset>
   </main>
   <div class="buttons">
+    <button type="submit" name="button" value="submit">Submit</button>
     <button id='add'>✚ Add</button>
     <button id='remove'>✖ Remove</button>
   </div>

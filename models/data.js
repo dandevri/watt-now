@@ -9,7 +9,13 @@ var DataSchema = mongoose.Schema({
     type: mongoose.Schema.Types.String,
     ref: 'users'
   },
-  appliances: []
+  appliances: [{
+    appName: String,
+    voltage: Number,
+    ampere: Number,
+    watt: Number,
+    quantity: Number
+  }]
 });
 
 var Data = mongoose.model('datas', DataSchema);

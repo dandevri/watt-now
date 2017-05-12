@@ -81,7 +81,6 @@ app.post('/register', function (req, res) {
     }
     return res.redirect('/login');
   });
-  res.render('pages/dashboard', {festival: 'Rollende keuken', totalUsage: '34%', urlDash: req.url, urlAppl: `/appliances/${req.params.user}/${req.params.festival}`});
 });
 
 app.get('/login', function (req, res) {
@@ -126,6 +125,32 @@ app.get('/register', function (req, res) {
 
 app.get('/appliances/:user/:festival', function (req, res) {
   res.render('pages/appliances', {urlAppl: req.url, urlDash: `/dashboard/${req.params.user}/${req.params.festival}`});
+});
+
+app.post('/appliances', function (req, res) {
+  var userId = req.session.user;
+  var appName = req.body.appName;
+  var voltage = req.body.voltage;
+  var ampere = req.body.ampere;
+  var watt = req.body.watt;
+  var quantity = req.body.quantity;
+
+  var Data = mongoose.model('datas');
+
+  var newData = new Data();
+  newData.userId = userId;
+  newData.appliances.appName = appName;
+  newData.appliances.voltage = voltage;
+  newData.appliances.ampere = ampere;
+  newData.appliances.watt = watt;
+  newData.appliances.quantity = quantity;
+  newData.save(function(err, savedData) {
+    if(err) {
+      console.log(err);
+      return res.send('error');
+    }
+    res.redirect('/appliances/:user/:festival');
+  });
 });
 
 app.get('/subscription', function (req, res) {
