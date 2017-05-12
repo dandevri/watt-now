@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <%- include ../partials/meta -%>
+    <link rel="stylesheet" type="text/css" href="/css/pages/chart.css">
+    <title>Chart</title>
+  </head>
+
+  <body>
+    <%- include ../partials/header -%>
+    <main>
+      <a href="/">↤ Go Home</a>
+      <section>
+        <h1>Appliances</h1>
+        <article class="appliances">
+          <div>
+            <h1>Espressomachine</h1>
+            <canvas id="line-chart"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <%- include ../partials/footer -%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js" charset="utf-8"></script>
+    <script>
+      var appliance = document.getElementById('line-chart');
+
+      var socket = io();
+
+      var delta = 0;
+      var currentBarWidth = 0;
+
+      var data = [<%= data %>];
+
+      socket.on('value', function (value) {
+        delta = value / 100;
+        updateChart(value);
+      });
+
+      var chart = new Chart(appliance, {
+        type: 'line',
+        data: {
+          labels: ["", "", "", "", "", "", "", ],
+          datasets: [
+            {
+              fill: false,
+              lineTension: 0.1,
+              borderCapStyle: 'butt',
+              borderDashOffset: 0.0,
+              borderColor: '#00ABEB',
+              borderJoinStyle: 'miter',
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              data: data,
+              spanGaps: false,
+            }
+          ]
+        },
+        options: {
+          legend: {
+            display: false
+          }
+        }
+      });
+
+      /**
+       * Replace the doughnut chart with a new one with updated data
+       * @param  {Number} value Filled percentage
+       */
+      function updateChart(value) {
+        value = Number(value);
+
+        data.push(value);
+
+        chart.data.datasets[0].data = data;
+        chart.data.labels.push("");
+        chart.update();
+      }
+    </script>
+  </body>
+</html>

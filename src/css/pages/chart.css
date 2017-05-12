@@ -1,0 +1,13 @@
+main {
+  margin: 1em;
+}
+
+main a:not(.appliances a) {
+  color: #5C637A;
+  opacity: .65;
+  transition: opacity .3s ease-in-out;
+}
+
+main a:hover {
+  opacity: 1;
+}

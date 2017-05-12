@@ -2,7 +2,7 @@ main {
   margin: 1em;
 }
 
-main a {
+main a:not(.appliances a) {
   color: #5C637A;
   opacity: .65;
   transition: opacity .3s ease-in-out;
@@ -33,6 +33,10 @@ main a:hover {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.appliances a {
+  color: #060c36;
 }
 
 .charts {
